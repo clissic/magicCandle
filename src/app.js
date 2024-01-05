@@ -1,5 +1,6 @@
 // IMPORT CONFIGS
 import express from "express";
+import compression from "compression";
 import MongoStore from "connect-mongo";
 import cors from "cors";
 import handlebars from "express-handlebars";
@@ -33,12 +34,12 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "handlebars");
 
 // RENDERS
-app.use("/", homeRouter);
+/* app.use("/", homeRouter); */
 
 app.get("*", (req, res) => {
   return res
     .status(404)
-    .render("errorPage", { msg: "Error 404, página no encontrada.", user });
+    .render("errorPage", { msg: "Error 404, página no encontrada." });
 });
 
-console.log(__dirname)
+console.log(__dirname + "ALGO MAS")
