@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.displayNone {
+  display: none;
+}
+
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    } 
+    25% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+
+/* MENU PRINCIPAL */
+
+header {
+  background-image: linear-gradient(
+    to right bottom,
+    #ffb0cf,
+    #ffb4d2,
+    #ffb9d5,
+    #ffbdd7,
+    #ffc1da,
+    #ffc6dd,
+    #ffcbdf,
+    #ffd0e2,
+    #ffd7e6,
+    #fedfeb,
+    #fee6ef,
+    #fdedf3
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.headerLogoLink {
+  width: 10%;
+}
+
+.headerLogoLink img {
+  width: 100%;
+}
+
+.headerLogoLink img:hover {
+    animation: rotateAnimation 1s ease-in-out;
+}
+
+.headerSubDiv {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+  justify-content: end;
+}
+
+.last {
+    padding-right: 4vw;
+}
+
+.headerSearchInput {
+  width: 95%;
+  height: 3rem;
+  border: none;
+  border-radius: 25px;
+  padding-left: 15px;
+  margin-bottom: 1vh;
+}
+
+.headerMenuList {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Architects-Daughter";
+  src: url("../../fonts/ArchitectsDaughter-Regular.ttf");
+}
+
+.headerMenuList li {
+  margin: 0 1.2vw 0 1.2vw;
+  font-size: x-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  border-bottom: transparent solid 2px;
+}
+
+.headerCuote {
+  font-family: "Architects-Daughter", serif;
+  font-size: x-large;
+  padding: 1vw 1vw 0 1vw;
+  text-align: justify;
+  margin: 0;
+}
+
+.headerCuote span {
+  color: red;
+}
+
+.headerCuoteAuthor {
+  text-align: end;
+  font-size: large;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.headerFavCart {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  justify-content: end;
+  align-items: center;
+}
+
+.headerFavCart a {
+  text-decoration: none;
+  color: black;
+}
+
+.headerCart {
+  display: flex;
+  align-items: center;
+}
+
+#cartCount {
+    margin: 0;
+    padding: 0;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-content {
+    width: max-content;
+    margin-top: 1.4vh;
+    display: none;
+    padding: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    width: 100%;
+}
+
+.dropdown-content li:hover {
+    color: rgb(0, 190, 190);
+    cursor: pointer;
+}
+
+.dropdown:hover {
+    display: block;
+  border-bottom: #ff488f solid 2px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER */
+
+footer {
+  background-image: linear-gradient(
+    to top,
+    #ff277b,
+    #ff3482,
+    #ff3f88,
+    #ff488f,
+    #ff5195,
+    #ff5e9c,
+    #ff69a3,
+    #ff74aa,
+    #ff84b4,
+    #ff94bd,
+    #ffa3c6,
+    #ffb1cf
+  );
+  padding-bottom: 1vh;
+}
+
+.footerMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh 0 5vh 0;
+}
+
+.footerMainDiv {
+  width: 30vw;
+}
+
+.footerMainDiv ul {
+  list-style: none;
+  font-size: x-large;
+  color: white;
+}
+
+.footerMainDiv ul li {
+  margin-top: 3vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.footerMainDiv a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerMainDiv a:hover {
+  text-decoration: underline;
+}
+
+.footerLogoLink {
+  width: 30vw;
+}
+
+.footerLogoLink img {
+  width: 70%;
+}
+
+.footerCredits {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1vw;
+  justify-content: center;
+}
+
+.footerCredits img {
+  width: 2.5vw;
+  filter: invert(100%);
+}
+
+.footerCreditsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerCreditsDiv p {
+  margin-bottom: 0;
+  color: white;
+}
+
+.footerCreditsDiv p a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerCreditsDiv p a:hover {
+  text-decoration: underline;
+}
