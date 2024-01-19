@@ -7,6 +7,34 @@
   display: none;
 }
 
+.text-shadow {
+  text-shadow: 0px 0px 3px black;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Architects-Daughter";
+  src: url("../../fonts/ArchitectsDaughter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Chewy-Regular";
+  src: url("../../fonts/Chewy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Playfair-Display-Italic";
+  src: url("../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+
+/* KEYFRAMES */
+
 @keyframes rotateAnimation {
     0% {
       transform: rotate(0deg);
@@ -87,11 +115,6 @@ header {
   margin: 0;
 }
 
-@font-face {
-  font-family: "Architects-Daughter";
-  src: url("../../fonts/ArchitectsDaughter-Regular.ttf");
-}
-
 .headerMenuList li {
   margin: 0 1.2vw 0 1.2vw;
   font-size: x-large;
@@ -156,7 +179,7 @@ header {
     padding: 0;
     position: absolute;
     background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
     z-index: 1;
 }
 
@@ -176,7 +199,21 @@ header {
 
 .dropdown:hover .dropdown-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.dropdown:hover .dropdown-content .dropdown-content-div  {
+  width: 30vw;
+}
+
+.dropdown:hover .dropdown-content .dropdown-content-img img  {
+  width: 150%;
+  height: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+  border-radius: 25px;
 }
 
 /* FOOTER */
@@ -269,4 +306,202 @@ footer {
 
 .footerCreditsDiv p a:hover {
   text-decoration: underline;
+}
+
+/* INFO DIVISION */
+
+.info-container {
+  background-color: #a0ddd021;
+  padding: 10vh 10vw 10vh 10vw;
+}
+
+.info-container h3 {
+  text-align: center;
+  color: #4cc54c;
+  font-family: "Playfair-Display-Italic";
+  font-size: 400%;
+  margin-bottom: 5vh;
+}
+
+.info-container .info-subtitle {
+  text-align: center;
+  color: black;
+  font-family: "Poppins-Regular";
+  font-size: 200%;
+}
+
+.info-container-div {
+  margin: 10vh 0 0 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8vw;
+  justify-content: space-around;
+}
+
+.info-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-div-icon {
+  margin-bottom: 5vh;
+  color: #BCD5AC;
+  font-size: 750%;
+}
+
+.info-div p {
+  text-align: center;
+}
+
+.info-div-title {
+  font-weight: 600;
+  font-size: xx-large;
+  color: #5DC460;
+  font-family: "Chewy-Regular";
+}
+
+.info-div-desc {
+  font-size: x-large;
+  color: #77DD77;
+  font-family: "Chewy-Regular";
+}
+
+/* BUY INFO DIVISION */
+
+.buy-info-container {
+  margin: 5vh 0 10vh 0;
+}
+
+.buy-info-container h3 {
+  text-align: center;
+  color: #0097B8;
+  font-family: "Playfair-Display-Italic";
+  font-size: 400%;
+  margin-bottom: 5vh;
+}
+
+.buy-info-container p {
+  text-align: center;
+  color: black;
+  font-family: "Poppins-Regular";
+  font-size: 200%;
+}
+
+.buy-info-container img {
+  width: 100%;
+}
+
+/* OUTSTANDING PRODUCTS */
+
+.dest-info-container {
+  background-color: #FFEDF9;
+  padding: 15vh 0 15vh 0;
+  margin-bottom: 5vh;
+}
+
+.dest-info-container h3 {
+  text-align: center;
+  color: #BA9AFF;
+  font-family: "Playfair-Display-Italic";
+  font-size: 400%;
+  margin-bottom: 5vh;
+}
+
+.dest-info-container p {
+  text-align: center;
+  color: black;
+  font-family: "Poppins-Regular";
+  font-size: 200%;
+}
+
+.dest-products {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5vw;
+  justify-content: center;
+  margin-top: 8vh;
+}
+
+.dest-prod img {
+  width: 14vw;
+  border-radius: 15px;
+  transition: all .3s;
+}
+
+.dest-prod img:hover {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, .6);
+  transition: all .3s;
+}
+
+.dest-prod h4 {
+  text-align: center;
+  font-family: "Poppins-Regular";
+  margin-top: 3vh;
+  font-size: xx-large ;
+}
+
+.dest-prod p {
+  font-family: "Playfair-Display-Italic";
+  color: #8751FA;
+}
+
+/* payment DIVISION */
+
+.payment-container {
+  padding: 10vh 10vw 10vh 10vw;
+}
+
+.payment-container h3 {
+  text-align: center;
+  color: #bead4b;
+  font-family: "Playfair-Display-Italic";
+  font-size: 400%;
+  margin-bottom: 5vh;
+}
+
+.payment-container .payment-subtitle {
+  text-align: center;
+  color: black;
+  font-family: "Poppins-Regular";
+  font-size: 200%;
+}
+
+.payment-container-div {
+  margin: 10vh 0 0 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8vw;
+  justify-content: space-around;
+}
+
+.payment-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-div-icon {
+  margin-bottom: 5vh;
+  color: black;
+  font-size: 750%;
+}
+
+.payment-div p {
+  text-align: center;
+}
+
+.payment-div-title {
+  font-weight: 600;
+  font-size: xx-large;
+  color: #e2ce5b;
+  font-family: "Poppins-Regular";
+}
+
+.payment-div-desc {
+  font-size: x-large;
+  color: black;
+  font-family: "Poppins-Regular";
 }

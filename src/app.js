@@ -39,7 +39,7 @@ app.set("view engine", "handlebars");
 app.get("*", (req, res) => {
   return res
     .status(404)
-    .render("errorPage", { msg: "Error 404, página no encontrada." });
+    .render("home", { msg: "Error 404, página no encontrada." });
 });
 
 console.log(__dirname + "ALGO MAS")
