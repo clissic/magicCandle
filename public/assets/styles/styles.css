@@ -308,6 +308,25 @@ footer {
   text-decoration: underline;
 }
 
+.drop-content-footer {
+  color: black !important;
+  margin-top: 3px;
+  display: none;
+  padding: 0 1vw;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+
+.dropdown-content-div-footer {
+  width: auto !important;
+}
+
+.drop-content-footer li {
+  margin-top: .5vh !important;
+}
+
 /* INFO DIVISION */
 
 .info-container {
